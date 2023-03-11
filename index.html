@@ -28,6 +28,11 @@
         font-weight: bolder;
         overflow: hidden;
       }
+      .title-box > span {
+        position: relative;
+        top: 0.8em;
+        animation: 0.3s swift-up ease-in-out forwards;
+      }
       .title-box > span:nth-of-type(1) i {
         animation-delay: 0.1s;
       }
@@ -53,6 +58,19 @@
       @keyframes swift-up {
         to {
           top: 0em;
+        }
+      }
+
+      .works-box {
+        overflow: hidden;
+        font-size: 0.9em;
+        opacity: 0;
+        animation: 0.5s fade-in ease-out forwards;
+        animation-delay: 1s;
+      }
+      @keyframes fade-in {
+        to {
+          opacity: 1;
         }
       }
     </style>
@@ -85,23 +103,25 @@
       <span><i>Software</i> </span>
       <span><i>Engineer.</i> </span>
     </div>
-    <ul>
-      <li>
-        <a href="https://windows-dead.yuetong3yu.tech/" target="_blank"
-          >💀 Web page simulate windows popup when system dead.</a
-        >
-      </li>
-      <li>
-        <a href="https://js-clean-code-cn.yuetong3yu.tech/" target="_blank"
-          >JavaScript Clean Code Chinese Handbook</a
-        >
-      </li>
-      <li>
-        <a href="https://picture-comparison.yuetong3yu.tech/" target="_blank"
-          >🌋 Picture Comparison</a
-        >
-      </li>
-    </ul>
+    <div class="works-box">
+      <ul>
+        <li>
+          <a href="https://windows-dead.yuetong3yu.tech/" target="_blank"
+            >💀 Web page simulate windows popup when system dead.</a
+          >
+        </li>
+        <li>
+          <a href="https://js-clean-code-cn.yuetong3yu.tech/" target="_blank"
+            >JavaScript Clean Code Chinese Handbook</a
+          >
+        </li>
+        <li>
+          <a href="https://picture-comparison.yuetong3yu.tech/" target="_blank"
+            >🌋 Picture Comparison</a
+          >
+        </li>
+      </ul>
+    </div>
 
     <script>
       const toggleButton = document.getElementById('switch')
